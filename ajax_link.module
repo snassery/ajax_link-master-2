@@ -7,14 +7,14 @@ function ajax_link_menu() {
   $items = array();
 
   $items['ajax-test'] = array(
-    'title' => 'Ajax Test',
+    'title' => 'Users Last Login with Current timezone',
     'type' => MENU_NORMAL_ITEM,
     'page callback' => 'ajax_link_page',
     'access arguments' => array('access content'),
     );
 
   $items['my-ajax-test/%'] = array(
-    'title' => 'Ajax test callback',
+    'title' => 'Users Last Login with Current timezone',
     'type' => MENU_CALLBACK,
     'page callback' => 'ajax_link_callback',
     'page arguments' => array(1),
@@ -31,7 +31,7 @@ function ajax_link_menu() {
 function ajax_link_page() {
   return array(
     '#type' => 'link',
-    '#title' => t('Ajax Link'),
+    '#title' => t('Users Last Login with Current timezone'),
     '#href' => 'my-ajax-test/nojs',
     '#prefix' => '<div id="ajax-link">',
     '#suffix' => '</div><div id="ajax-display"></div>',
